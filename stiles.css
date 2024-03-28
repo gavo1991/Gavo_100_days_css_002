@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #3FAF82;
+    border-radius: 5px;
+}
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#btn{
+    width: 80px;
+    height: 56px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.line{
+    display: block;
+    width: 100%;
+    height: 9px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 #0000005b;
+    transition: 0.3s;
+}
+
+.line1{
+    top: 0;
+}
+
+.line2{
+    top: 50%;
+}
+
+.line3{
+    top: 100%;
+}
+
+.line-1{
+    animation: anim1 0.7s ease-in-out forwards;
+}
+
+@keyframes anim1{
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+    50%{
+        transform: translateY(25px) rotate(0);
+    }
+    100%{
+        transform: translateY(25px) rotate(45deg);
+    }
+}
+
+.line-2{
+    width: 0;
+    height: 0;
+}
+
+
+.line-3{
+    animation: anim2 0.7s ease-in-out forwards;
+}
+
+@keyframes anim2{
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+    50%{
+        transform: translateY(-30px) rotate(0);
+    }
+    100%{
+        transform: translateY(-23px) rotate(135deg);
+    }
+}
